@@ -1,8 +1,12 @@
 import AboutSection from "@/components/AboutSection";
 import BackgroundLock from "@/components/BackgroundLock";
+import ContactSection from "@/components/ContactSection";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
+import PortfolioShowcase from "@/components/PortfolioShowcase";
+import Skills from "@/components/Skills";
 import React from "react";
+import Footer from "@/components/Footer";
 
 const page = () => {
   return (
@@ -11,7 +15,7 @@ const page = () => {
       <div className="flex flex-col min-h-screen">
         {/* Navbar top */}
         <header>
-          <Navbar></Navbar>
+          <Navbar/>
         </header>
 
         {/* Main content */}
@@ -19,10 +23,15 @@ const page = () => {
           {/* Your main content goes here */}
           <HeroSection />
           <AboutSection />
+          <Skills />
+          <PortfolioShowcase />
+          <ContactSection />
         </main>
 
         {/* Footer */}
-        <footer></footer>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </>
   );

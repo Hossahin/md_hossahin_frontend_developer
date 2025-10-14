@@ -7,13 +7,13 @@ import MyPhoto from "./MyPhoto";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between items-center min-h-screen pt-24 md:pt-28 lg:pt-20 px-4 sm:px-6 md:px-8">
+    <div className="flex flex-col-reverse md:flex-row justify-between items-center pt-24 md:pt-28 lg:pt-20 px-4 sm:px-6 md:px-8">
       <div className="flex-1 mt-8 md:mt-0 text-center md:text-left w-full">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold md:w-full">
           <span className="text-animated-gradient">Frontend Developer</span>
         </h1>
 
-        <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
+        <p className="mt-4 text-lg lg:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
           I create responsive, modern, and user-friendly web experiences that
           captivate and engage.
         </p>
