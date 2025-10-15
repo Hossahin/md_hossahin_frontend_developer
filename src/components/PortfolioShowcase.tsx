@@ -4,8 +4,8 @@ import { LuExternalLink } from "react-icons/lu";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import {
   Dialog,
+  DialogClose,
   DialogContent,
-  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -125,17 +125,19 @@ export default function ProjectsSection() {
                 Live Demo <LuExternalLink />
               </Link>
 
-              <div className="flex-1 flex justify-center items-center gap-1 px-4 py-2 rounded-lg bg-blue-700 border border-blue-500 text-white font-medium transition-all duration-300 ease-in-out hover:bg-blue-700/20 hover:text-blue-700 hover:shadow-lg hover:border-blue-700 hover:underline">
+              <div className="flex-1 flex justify-center items-center gap-1 ">
                 <Dialog>
-                  <DialogTrigger className="flex justify-center items-center gap-2 cursor-pointer">
+                  <DialogTrigger className="w-full flex justify-center items-center gap-2 cursor-pointer px-4 py-2 rounded-lg bg-blue-700 border border-blue-500 text-white font-medium transition-all duration-300 ease-in-out hover:bg-blue-700/20 hover:text-blue-700 hover:shadow-lg hover:border-blue-700 hover:underline">
                     Details <FaArrowRight />
                   </DialogTrigger>
-                  <DialogContent>
+                  <DialogContent className="!max-w-none w-[80vw] h-[80vh] p-6 rounded-xl bg-gray-800 border border-blue-700/40 overflow-hidden">
                     <DialogHeader>
-                      <DialogTitle>Project Details</DialogTitle>
+                      <DialogTitle className="text-gray-200 text-2xl md:text-3xl font-bold">
+                        Project Details
+                      </DialogTitle>
                     </DialogHeader>
 
-                    <ScrollArea className=" mt-4 space-y-4">
+                    <ScrollArea className="h-[calc(80vh-6rem)] pr-2">
                       <div className="bg-gray-800 p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg space-y-8">
                         {/* Project Title & Overview */}
 
