@@ -1,7 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LuExternalLink } from "react-icons/lu";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ScrollArea } from "./ui/scroll-area";
+import { FaArrowLeft, FaCode, FaGithub } from "react-icons/fa6";
 
 export default function ProjectsSection() {
   const projects = [
@@ -10,24 +20,65 @@ export default function ProjectsSection() {
       img: "/projects/AppOrbit.png",
       live: "https://assignment-12-apporbit.web.app/",
       details: "/projects/appOrbit/details",
-      description:
+      subDescription:
         "Community-driven platform to discover, review, and share Web Apps, AI tools, software, and games.",
+      description:
+        "Tech Discovery Platform — A modern, community-driven platform for discovering, sharing, and reviewing the latest technology products. Inspired by Product Hunt, this platform empowers tech enthusiasts to explore innovations across Web Apps, AI tools, Software, Games, and Mobile Apps.",
+      keyHighlights: [
+        "Product submission and management system",
+        "Upvote and rating functionality driven by community feedback",
+        "Honest, detailed user reviews",
+        "Role-based dashboards for Users, Moderators, and Admins",
+        "Moderation tools to maintain content quality",
+        "Stripe payment integration for premium access",
+        "Trending & featured product sections",
+        "Real-time review updates",
+        "Analytics dashboard for product owners",
+      ],
+      technologies: ["React", "JavaScript", "Firebase", "Express", "MongoDB"],
+      clientSide: "https://github.com/Hossahin/apporbit",
+      serverSide: "https://github.com/Hossahin/apporbit-server",
     },
     {
       name: "HelpingHub",
       img: "/projects/HelpingHub.png",
       live: "https://assignment-11-category-10.web.app/",
       details: "/projects/HelpingHub/details",
-      description:
+      subDescription:
         "HelpingHub is a volunteer platform to create, join, and manage opportunities with Firebase authentication.",
+      description:
+        "Volunteer Management Platform HelpingHub is a web platform where users can create, manage, and join volunteer opportunities. Users can post volunteer needs, sign up for others’ posts, and manage their activities in a simple, organized way.",
+      keyHighlights: [
+        "Create, read, update, delete volunteer posts",
+        "Search and join volunteer opportunities",
+        "Protected routes using Firebase Auth",
+        "Fully responsive and mobile-friendly design",
+        "Dark and light theme toggle",
+      ],
+      technologies: ["React", "JavaScript", "Firebase", "Express", "MongoDB"],
+      clientSide: "https://github.com/Hossahin/HelpingHub-Project-Clients",
+      serverSide: "https://github.com/Hossahin/HelpingHub-Project-Server",
     },
     {
       name: "HobbyHub",
       img: "/projects/HobbyHub.png",
       live: "https://assignment-papaya.web.app/",
       details: "/projects/HobbyHub/details",
-      description:
+      subDescription:
         "HobbyHub lets users find, join, and create hobby groups with responsive design and real-time features.",
+      description:
+        "Local Hobby Group Organizer HobbyHub is a platform to find, join, and create local hobby groups like art, reading, and cooking. It offers a clean, responsive design with dark/light modes, Firebase authentication, and real-time group management for a seamless user experience.",
+      keyHighlights: [
+        "Hero slider banner",
+        "Six featured groups of the day",
+        "Animated statistics using CountUp",
+        "Why People Love HobbyHub testimonial section",
+        "Browse all user-created groups",
+        "Firebase pre-fills user name and email",
+      ],
+      technologies: ["React", "JavaScript", "Firebase", "Express", "MongoDB"],
+      clientSide: "https://github.com/Hossahin/HobbyHub-Project-Client",
+      serverSide: "https://github.com/Hossahin/HobbyHub-Project-Server",
     },
   ];
 
@@ -62,7 +113,7 @@ export default function ProjectsSection() {
               {project.name}
             </h1>
             <p className="mt-2 text-gray-400 text-sm sm:text-base leading-relaxed">
-              {project.description}
+              {project.subDescription}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-2 mt-4">
@@ -73,12 +124,90 @@ export default function ProjectsSection() {
               >
                 Live Demo <LuExternalLink />
               </Link>
-              <Link
-                href={project.details}
-                className="flex-1 flex justify-center items-center gap-1 px-4 py-2 rounded-lg bg-blue-700 border border-blue-500 text-white font-medium transition-all duration-300 ease-in-out hover:bg-blue-700/20 hover:text-blue-700 hover:shadow-lg hover:border-blue-700 hover:underline"
-              >
-                Details <FaArrowRight />
-              </Link>
+
+              <div className="flex-1 flex justify-center items-center gap-1 px-4 py-2 rounded-lg bg-blue-700 border border-blue-500 text-white font-medium transition-all duration-300 ease-in-out hover:bg-blue-700/20 hover:text-blue-700 hover:shadow-lg hover:border-blue-700 hover:underline">
+                <Dialog>
+                  <DialogTrigger className="flex justify-center items-center gap-2 cursor-pointer">
+                    Details <FaArrowRight />
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>
+                      <DialogTitle>Project Details</DialogTitle>
+                    </DialogHeader>
+
+                    <ScrollArea className=" mt-4 space-y-4">
+                      <div className="bg-gray-800 p-4 sm:p-6 lg:p-8 rounded-xl shadow-lg space-y-8">
+                        {/* Project Title & Overview */}
+
+                        <section>
+                          <h1 className="text-3xl font-bold text-blue-400 border-b-4 border-blue-400 pb-1 inline-block">
+                            {project?.name}
+                          </h1>
+                          <p className="mt-4 text-gray-300 leading-relaxed">
+                            {project?.description}
+                          </p>
+
+                          <div className="mt-4">
+                            <h2 className="text-xl font-semibold text-blue-400 mb-3">
+                              Key Highlights
+                            </h2>
+                            <ul className="space-y-2">
+                              {project.keyHighlights?.map((item, idx) => (
+                                <li
+                                  key={idx}
+                                  className="flex items-start gap-2 text-gray-300"
+                                >
+                                  <FaCheckCircle className="text-blue-400 mt-1" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        </section>
+
+                        {/* Technologies */}
+                        <section>
+                          <h1 className="flex items-center gap-2 text-2xl font-semibold text-blue-400 border-b-4 w-fit border-blue-400 pb-1">
+                            <FaCode /> Technologies Used
+                          </h1>
+                          <div className="mt-3 flex flex-wrap gap-2">
+                            {project.technologies?.map((tech, idx) => (
+                              <span
+                                key={idx}
+                                className="px-4 py-1 rounded-lg bg-blue-400/10 border border-blue-400 text-blue-400 font-medium 
+              cursor-pointer transition-all duration-300 ease-in-out 
+              hover:bg-blue-500 hover:text-white hover:shadow-lg"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </section>
+
+                        {/* Links */}
+                        <section className="flex flex-col sm:flex-row gap-4">
+                          <Link
+                            href={project.clientSide}
+                            target="_blank"
+                            className="flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-blue-500 text-white font-medium 
+          transition-all duration-300 hover:bg-blue-400 hover:shadow-lg w-full sm:w-auto"
+                          >
+                            <FaGithub /> Client
+                          </Link>
+                          <Link
+                            href={project.serverSide}
+                            target="_blank"
+                            className="flex justify-center items-center gap-2 px-4 py-2 rounded-lg bg-transparent border border-blue-400 text-blue-400 font-medium 
+          transition-all duration-300 hover:bg-blue-500 hover:text-white hover:shadow-lg w-full sm:w-auto"
+                          >
+                            <FaGithub /> Server
+                          </Link>
+                        </section>
+                      </div>
+                    </ScrollArea>
+                  </DialogContent>
+                </Dialog>
+              </div>
             </div>
           </div>
         ))}
