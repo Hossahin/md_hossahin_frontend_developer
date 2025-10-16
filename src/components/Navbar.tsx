@@ -1,5 +1,7 @@
 import React from "react";
 import { GoDownload } from "react-icons/go";
+import { BorderBeam } from "./ui/border-beam";
+import { SparklesText } from "./ui/sparkles-text";
 
 const Navbar = () => {
   const navLinks = (
@@ -12,8 +14,14 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="w-11/12 mx-auto bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-10 border border-blue-700 rounded-full mt-2">
-      <div className="navbar max-w-screen-2xl mx-auto flex justify-center items-center">
+    <div className="w-full bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-20 mt-2">
+      <div className="navbar relative overflow-hidden max-w-screen-2xl mx-auto flex justify-center items-center border border-blue-700 rounded-full">
+        <BorderBeam
+          duration={6}
+          size={400}
+          borderWidth={2.5}
+          className="from-transparent via-sky-400/80 to-transparent blur-[1px]"
+        />
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -40,7 +48,18 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <p className="text-xl text-white pl-0 md:pl-5">Hossahin</p>
+          <div className="pl-0 md:pl-5">
+            <SparklesText
+              sparklesCount={10}
+              colors={{
+                first: "#38bdf8", 
+                second: "#a855f7", 
+              }}
+              className="text-2xl text-white tracking-wide"
+            >
+              Md Hossahin
+            </SparklesText>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-4 text-white">

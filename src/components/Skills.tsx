@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BlurText from "./BlurText";
 
 const skills = [
   {
@@ -52,9 +53,19 @@ const Skills = () => {
   return (
     <div className="mt-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-animated-gradient">
+        {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-animated-gradient">
           My Skills
-        </h2>
+        </h2> */}
+
+        <div className="flex justify-center">
+          <BlurText
+            text="My Skills"
+            delay={500}
+            animateBy="words"
+            direction="top"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+          />
+        </div>
 
         <p className="text-lg lg:text-xl text-center text-gray-400 mb-2 md:mb-4  w-full lg:w-3/4 mx-auto leading-relaxed">
           Here are some of the technologies and tools I work with:

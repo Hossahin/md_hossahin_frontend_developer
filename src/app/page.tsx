@@ -15,7 +15,7 @@ const page = () => {
       <div className="flex flex-col min-h-screen">
         {/* Navbar top */}
         <header>
-          <Navbar/>
+          <Navbar />
         </header>
 
         {/* Main content */}
