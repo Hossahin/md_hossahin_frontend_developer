@@ -4,14 +4,14 @@ import { LuExternalLink } from "react-icons/lu";
 import { FaArrowRight, FaCheckCircle } from "react-icons/fa";
 import {
   Dialog,
-  DialogClose,
   DialogContent,
   DialogHeader,
+  DialogOverlay,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { ScrollArea } from "./ui/scroll-area";
-import { FaArrowLeft, FaCode, FaGithub } from "react-icons/fa6";
+import { FaCode, FaGithub } from "react-icons/fa6";
 
 export default function ProjectsSection() {
   const projects = [
@@ -100,14 +100,29 @@ export default function ProjectsSection() {
             className="p-2 lg:p-6 bg-blue-700/10 border border-blue-600/50 rounded-lg max-w-md mx-auto md:max-w-none md:w-full transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
           >
             {/* Image container */}
-            <div className="rounded-lg w-full overflow-hidden relative aspect-[4/3]">
-              <Image
-                src={project.img}
-                alt={project.name}
-                fill
-                className="object-cover transition-transform duration-300 ease-in-out hover:scale-105"
-              />
-            </div>
+            {/* Image container with full-screen preview */}
+            <Dialog>
+              <DialogTrigger asChild>
+                <div className="rounded-lg w-full overflow-hidden relative aspect-[4/3] cursor-pointer hover:scale-105 transition-transform duration-300">
+                  <Image
+                    src={project.img}
+                    alt={project.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </DialogTrigger>
+
+              <DialogOverlay className="fixed inset-0 bg-black/70 backdrop-blur-sm" />
+              <DialogContent className="!max-w-none w-full h-full p-0 bg-transparent flex justify-center items-center">
+                <Image
+                  src={project.img}
+                  alt={project.name}
+                  fill
+                  className="object-contain max-h-full max-w-full"
+                />
+              </DialogContent>
+            </Dialog>
 
             <h1 className="mt-4 text-lg sm:text-xl font-semibold text-blue-700">
               {project.name}
@@ -130,6 +145,8 @@ export default function ProjectsSection() {
                   <DialogTrigger className="w-full flex justify-center items-center gap-2 cursor-pointer px-4 py-2 rounded-lg bg-blue-700 border border-blue-500 text-white font-medium transition-all duration-300 ease-in-out hover:bg-blue-700/20 hover:text-blue-700 hover:shadow-lg hover:border-blue-700 hover:underline">
                     Details <FaArrowRight />
                   </DialogTrigger>
+                  <DialogOverlay className="fixed inset-0 bg-black/40 backdrop-blur-sm opacity-0 data-[state=open]:opacity-100 transition-opacity duration-600" />
+
                   <DialogContent className="!max-w-none w-[80vw] h-[80vh] p-6 rounded-xl bg-gray-800 border border-blue-700/40 overflow-hidden">
                     <DialogHeader>
                       <DialogTitle className="text-gray-200 text-2xl md:text-3xl font-bold">
@@ -157,10 +174,10 @@ export default function ProjectsSection() {
                               {project.keyHighlights?.map((item, idx) => (
                                 <li
                                   key={idx}
-                                  className="flex items-start gap-2 text-gray-300"
+                                  className="flex items-start gap-2 text-gray-300 text-sm sm:text-base md:text-lg"
                                 >
-                                  <FaCheckCircle className="text-blue-400 mt-1" />
-                                  {item}
+                                  <FaCheckCircle className="text-blue-400 flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 mt-1" />
+                                  <span className="flex-1">{item}</span>
                                 </li>
                               ))}
                             </ul>
@@ -169,7 +186,7 @@ export default function ProjectsSection() {
 
                         {/* Technologies */}
                         <section>
-                          <h1 className="flex items-center gap-2 text-2xl font-semibold text-blue-400 border-b-4 w-fit border-blue-400 pb-1">
+                          <h1 className="flex items-center gap-2 text-xl md:text-2xl font-semibold text-blue-400 border-b-4 w-fit border-blue-400 pb-1">
                             <FaCode /> Technologies Used
                           </h1>
                           <div className="mt-3 flex flex-wrap gap-2">
