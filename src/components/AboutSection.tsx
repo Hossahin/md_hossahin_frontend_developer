@@ -1,13 +1,23 @@
 import React from "react";
 import { GoDownload } from "react-icons/go";
 import { IoCodeSlash } from "react-icons/io5";
+import BlurText from "./BlurText";
 const AboutSection = () => {
   return (
     <div className="mt-12 px-4">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-animated-gradient">
+      {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-animated-gradient">
         About Me
-      </h2>
+      </h2> */}
 
+      <div className="flex justify-center">
+        <BlurText
+          text="About Me"
+          delay={500}
+          animateBy="words"
+          direction="top"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+        />
+      </div>
       <p className="text-lg lg:text-xl text-center text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-3/4 mx-auto leading-relaxed">
         I'm a Frontend Developer creating modern, responsive, and user-friendly
         websites with clean, maintainable code. Skilled in React, Tailwind CSS,

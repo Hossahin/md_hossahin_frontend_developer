@@ -12,6 +12,8 @@ import {
 } from "@/components/ui/dialog";
 import { ScrollArea } from "./ui/scroll-area";
 import { FaCode, FaGithub } from "react-icons/fa6";
+import BlurText from "./BlurText";
+import { BorderBeam } from "./ui/border-beam";
 
 export default function ProjectsSection() {
   const projects = [
@@ -84,9 +86,18 @@ export default function ProjectsSection() {
 
   return (
     <div className="px-4 mt-12">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-center text-animated-gradient">
+      {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-center text-animated-gradient">
         Projects Showcase
-      </h2>
+      </h2> */}
+      <div className="flex justify-center">
+        <BlurText
+          text="Projects Showcase"
+          delay={500}
+          animateBy="words"
+          direction="top"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
+        />
+      </div>
 
       <p className="text-lg lg:text-xl text-center text-gray-400  w-full lg:w-3/4 mx-auto leading-relaxed">
         A selection of my top projects highlighting my skills in modern web
@@ -97,8 +108,16 @@ export default function ProjectsSection() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="p-2 lg:p-6 bg-blue-700/10 border border-blue-600/50 rounded-lg max-w-md mx-auto md:max-w-none md:w-full transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
+            className="relative overflow-hidden p-2 lg:p-6 bg-blue-700/10 border border-blue-600/30 rounded-lg max-w-md mx-auto md:max-w-none md:w-full transition-all duration-500 ease-in-out hover:-translate-y-2 hover:shadow-2xl"
           >
+            <BorderBeam
+              duration={8}
+              size={400}
+              borderWidth={3}
+              reverse
+              className="from-transparent via-blue-400/70 to-transparent blur-[2px]"
+            />
+
             {/* Image container */}
             {/* Image container with full-screen preview */}
             <Dialog>
