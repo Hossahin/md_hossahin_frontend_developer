@@ -24,6 +24,8 @@ const HeroSection = () => {
           />
         </div>
 
+        
+
         <p className="mt-4 text-lg lg:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
           I create responsive, modern, and user-friendly web experiences that
           captivate and engage.

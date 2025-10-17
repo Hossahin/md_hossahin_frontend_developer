@@ -89,15 +89,19 @@ export default function ProjectsSection() {
       {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-2 text-center text-animated-gradient">
         Projects Showcase
       </h2> */}
-      <div className="flex justify-center">
-        <BlurText
-          text="Projects Showcase"
-          delay={500}
-          animateBy="words"
-          direction="top"
-          className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-        />
-      </div>
+      
+
+      <div className="w-full flex justify-center">
+          <div className="text-center">
+            <BlurText
+              text="Projects Showcase"
+              delay={500}
+              animateBy="words"
+              direction="top"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 inline-block"
+            />
+          </div>
+        </div>
 
       <p className="text-lg lg:text-xl text-center text-gray-400  w-full lg:w-3/4 mx-auto leading-relaxed">
         A selection of my top projects highlighting my skills in modern web
