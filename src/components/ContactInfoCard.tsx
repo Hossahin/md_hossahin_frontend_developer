@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const ContactInfo = () => {
   return (
-   <motion.div
-      className="bg-gray-900/50 p-6 rounded-xl text-center flex flex-col justify-center border border-gray-700/50"
+    <motion.div
+      className="relative bg-gray-900/50 p-6 rounded-xl text-center flex flex-col justify-center border border-gray-700/50"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}

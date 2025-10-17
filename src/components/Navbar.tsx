@@ -2,6 +2,7 @@ import React from "react";
 import { GoDownload } from "react-icons/go";
 import { BorderBeam } from "./ui/border-beam";
 import { SparklesText } from "./ui/sparkles-text";
+import { ShimmerButton } from "./ui/shimmer-button";
 
 const Navbar = () => {
   const navLinks = (
@@ -48,17 +49,20 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="pl-0 md:pl-5">
+          <div className="relative pl-0 md:pl-5 inline-block w-fit">
             <SparklesText
-              sparklesCount={10}
+              sparklesCount={5} // increase for full coverage
               colors={{
-                first: "#38bdf8", 
-                second: "#a855f7", 
+                first: "#38bdf8",
+                second: "#a855f7",
               }}
-              className="text-2xl text-white tracking-wide"
+              className="relative text-2xl text-white tracking-wide z-10"
             >
               Md Hossahin
             </SparklesText>
+
+            {/* optional glow backdrop */}
+            <div className="absolute inset-0 blur-[8px] bg-gradient-to-r from-sky-400/10 via-purple-500/10 to-pink-500/10 rounded-md"></div>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

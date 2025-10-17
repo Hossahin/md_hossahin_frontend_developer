@@ -14,13 +14,15 @@ const HeroSection = () => {
           <span className="text-animated-gradient">Frontend Developer</span>
         </h1> */}
 
-        <BlurText
-          text="Frontend Developer"
-          delay={150}
-          animateBy="words"
-          direction="top"
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold md:w-full"
-        />
+        <div className="flex justify-center md:justify-start">
+          <BlurText
+            text="Frontend Developer"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold md:w-full"
+          />
+        </div>
 
         <p className="mt-4 text-lg lg:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
           I create responsive, modern, and user-friendly web experiences that
