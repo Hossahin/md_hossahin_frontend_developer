@@ -26,7 +26,6 @@ const ContactSection = () => {
 
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
           <ContactForm />
-
           <ContactInfoCard />
         </div>
       </div>
