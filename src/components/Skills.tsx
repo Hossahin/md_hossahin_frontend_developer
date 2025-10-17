@@ -19,7 +19,7 @@ const skills = [
     shadowColor: "shadow-yellow-500/40",
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     icon: "/skilIcon/TailwindCSS.png",
     shadowColor: "shadow-cyan-500/40",
   },
@@ -125,7 +125,7 @@ const Skills = () => {
                   <div
                     key={index}
                     className={`group relative flex flex-col items-center justify-center h-full
-                    rounded-2xl p-6 w-40 sm:w-48 backdrop-blur-md
+                    rounded-2xl p-6 w-30 sm:w-35 md:w-48 backdrop-blur-md
                     bg-white/5 border border-white/10 
                     transition-all duration-500 ease-[cubic-bezier(0.25,0.1,0.25,1)]
                     hover:-translate-y-3 hover:scale-[1.05] hover:z-20

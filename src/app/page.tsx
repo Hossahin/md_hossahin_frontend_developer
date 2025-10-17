@@ -7,6 +7,7 @@ import PortfolioShowcase from "@/components/PortfolioShowcase";
 import Skills from "@/components/Skills";
 import React from "react";
 import Footer from "@/components/Footer";
+import MyGitHubCalendar from "@/components/MyGitHubCalendar";
 
 const page = () => {
   return (
@@ -25,6 +26,7 @@ const page = () => {
           <AboutSection />
           <Skills />
           <PortfolioShowcase />
+          <MyGitHubCalendar/>
           <ContactSection />
         </main>
 
