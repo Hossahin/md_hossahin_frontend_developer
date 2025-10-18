@@ -5,6 +5,7 @@ import Link from "next/link";
 import HireMe from "./HireMe";
 import MyPhoto from "./MyPhoto";
 import BlurText from "./BlurText";
+import TextType from "./TextType";
 
 const HeroSection = () => {
   return (
@@ -14,7 +15,18 @@ const HeroSection = () => {
           <span className="text-animated-gradient">Frontend Developer</span>
         </h1> */}
 
-        <div className="flex justify-center md:justify-start">
+        <div className="flex flex-col justify-center md:justify-start">
+          <TextType
+            text={["Hey, I'm Md Hossahin"]}
+            textColors={["#9CA3AF"]}
+            typingSpeed={75}
+            pauseDuration={1500}
+            showCursor={true}
+            cursorCharacter="|"
+            cursorBlinkDuration={0.5}
+            className="text-lg lg:text-xl pl-2"
+          />
+
           <BlurText
             text="Frontend Developer"
             delay={150}
@@ -24,9 +36,7 @@ const HeroSection = () => {
           />
         </div>
 
-        
-
-        <p className="mt-4 text-lg lg:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
+        <p className="pl-2 mt-4 text-lg lg:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
           I create responsive, modern, and user-friendly web experiences that
           captivate and engage.
         </p>

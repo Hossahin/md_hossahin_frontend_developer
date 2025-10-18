@@ -48,6 +48,16 @@ const skills = [
     icon: "/skilIcon/MongoDB.png",
     shadowColor: "shadow-green-700/40",
   },
+  {
+    name: "Next.js",
+    icon: "/skilIcon/NextJs.png",
+    shadowColor: "shadow-gray-800/40",
+  },
+  {
+    name: "TypeScript",
+    icon: "/skilIcon/TypeScript.png",
+    shadowColor: "shadow-blue-700/40",
+  },
 ];
 
 const Skills = () => {
@@ -116,7 +126,7 @@ const Skills = () => {
           >
             <Marquee
               pauseOnHover
-              speed={60}
+              speed={80}
               gradient={false}
               className="!overflow-visible [&>div]:!overflow-visible [&>div>div]:!overflow-visible"
             >
