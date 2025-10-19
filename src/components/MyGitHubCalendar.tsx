@@ -38,8 +38,8 @@ const MyGitHubCalendar = () => {
         </div>
 
         <p className="text-gray-400 text-center max-w-2xl mx-auto mb-8">
-          A visual representation of my daily coding activity on GitHub. I’m
-          passionate about open-source and continuous learning.
+          A visual representation of my daily coding activity on GitHub.
+          I&apos;m passionate about open-source and continuous learning.
         </p>
 
         <div className="overflow-x-auto flex justify-center">
