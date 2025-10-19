@@ -63,7 +63,7 @@ const MyGitHubCalendar = () => {
           {/* GitHub Stats */}
           <div className="w-full sm:w-[420px] aspect-[3/1] relative">
             <Image
-              src="https://github-readme-stats.vercel.app/api?username=hossahin&show_icons=true&theme=radical&hide_border=true"
+              src="https://github-readme-stats.vercel.app/api?username=Hossahin&theme=transparent&hide_border=true&include_all_commits=false&count_private=false"
               alt="GitHub Stats"
               fill
               className="rounded-lg object-contain"
@@ -74,7 +74,7 @@ const MyGitHubCalendar = () => {
           {/* GitHub Streak */}
           <div className="w-full sm:w-[420px] aspect-[3/1] relative">
             <Image
-              src="https://github-readme-streak-stats.herokuapp.com/?user=hossahin&theme=radical&hide_border=true"
+              src="https://nirzak-streak-stats.vercel.app/?user=Hossahin&theme=transparent&hide_border=true"
               alt="GitHub Streak"
               fill
               className="rounded-lg object-contain"
@@ -85,7 +85,7 @@ const MyGitHubCalendar = () => {
           {/* Most Used Languages */}
           <div className="w-full sm:w-[420px] aspect-[3/1] relative">
             <Image
-              src="https://github-readme-stats.vercel.app/api/top-langs/?username=hossahin&layout=compact&theme=radical&hide_border=true"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hossahin&theme=transparent&hide_border=true&include_all_commits=false&count_private=false&layout=compact"
               alt="Most Used Languages"
               fill
               className="rounded-lg object-contain"

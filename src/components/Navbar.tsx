@@ -1,8 +1,5 @@
 import React from "react";
 import { GoDownload } from "react-icons/go";
-import { BorderBeam } from "./ui/border-beam";
-import { SparklesText } from "./ui/sparkles-text";
-import { ShimmerButton } from "./ui/shimmer-button";
 
 const Navbar = () => {
   const navLinks = (
@@ -17,12 +14,6 @@ const Navbar = () => {
   return (
     <div className="w-full bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-20 mt-2">
       <div className="navbar relative overflow-hidden max-w-screen-2xl mx-auto flex justify-center items-center border border-blue-700 rounded-full">
-        <BorderBeam
-          duration={6}
-          size={400}
-          borderWidth={2.5}
-          className="from-transparent via-sky-400/80 to-transparent blur-[1px]"
-        />
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -50,19 +41,7 @@ const Navbar = () => {
           </div>
 
           <div className="relative pl-0 md:pl-5 inline-block w-fit">
-            <SparklesText
-              sparklesCount={5} // increase for full coverage
-              colors={{
-                first: "#38bdf8",
-                second: "#a855f7",
-              }}
-              className="relative text-2xl text-white tracking-wide z-10"
-            >
-              Md Hossahin
-            </SparklesText>
-
-            {/* optional glow backdrop */}
-            <div className="absolute inset-0 blur-[8px] bg-gradient-to-r from-sky-400/10 via-purple-500/10 to-pink-500/10 rounded-md"></div>
+            <h3>Md Hossahin</h3>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
