@@ -41,8 +41,6 @@ const HeroSection = () => {
           captivate and engage.
         </p>
 
-        <p>Test code</p>
-
         <div className="mt-6 sm:mt-8 flex justify-center md:justify-start gap-3 sm:gap-4">
           <Link
             href={"https://www.linkedin.com/in/hossahin/"}

@@ -1,4 +1,3 @@
-"use client"
 import React from "react";
 import { GoDownload } from "react-icons/go";
 import { IoCodeSlash } from "react-icons/io5";
@@ -20,11 +19,11 @@ const AboutSection = () => {
         />
       </div>
       <p className="text-lg lg:text-xl text-center text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-3/4 mx-auto leading-relaxed">
-        I'm a Frontend Developer creating modern, responsive, and user-friendly
-        websites with clean, maintainable code. Skilled in React, Tailwind CSS,
-        and Firebase, I deliver fast, accessible digital experiences. Passionate
-        about growth, I'm expanding into full-stack development to build
-        scalable, secure web applications.
+        I&apos;m a Frontend Developer creating modern, responsive, and
+        user-friendly websites with clean, maintainable code. Skilled in React,
+        Tailwind CSS, and Firebase, I deliver fast, accessible digital
+        experiences. Passionate about growth, I&apos;m expanding into full-stack
+        development to build scalable, secure web applications.
       </p>
 
       <div className="flex flex-col sm:flex-row gap-3 mt-6 sm:mt-8 justify-center">

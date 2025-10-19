@@ -1,4 +1,3 @@
-"use client"
 import React from "react";
 import { GoDownload } from "react-icons/go";
 
