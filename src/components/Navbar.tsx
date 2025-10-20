@@ -41,7 +41,11 @@ const Navbar = () => {
           </div>
 
           <div className="relative pl-0 md:pl-5 inline-block w-fit">
-            <h3>Md Hossahin</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-400 tracking-wide">
+              <span className="text-blue-500">&lt;</span>
+              Md <span className="text-blue-500">Hossahin</span>
+              <span className="text-blue-500">/&gt;</span>
+            </h3>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
