@@ -148,7 +148,7 @@ const Skills = () => {
           <>
             <div className="relative overflow-visible">
               <div
-                className="overflow-hidden border border-gray-700 py-6"
+                className="overflow-hidden py-6"
                 style={{
                   WebkitMaskImage:
                     "linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",

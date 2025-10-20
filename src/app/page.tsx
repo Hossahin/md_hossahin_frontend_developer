@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import React from "react";
 import Footer from "@/components/Footer";
 import MyGitHubCalendar from "@/components/MyGitHubCalendar";
+import Animation from "@/components/Animation";
 
 const page = () => {
   return (
@@ -21,13 +22,29 @@ const page = () => {
 
         {/* Main content */}
         <main className="flex-1 w-full max-w-screen-2xl mx-auto">
-          {/* Your main content goes here */}
-          <HeroSection />
-          <AboutSection />
-          <Skills />
-          <PortfolioShowcase />
-          <MyGitHubCalendar/>
-          <ContactSection />
+          <Animation type="zoomOut" duration={1.5} delay={0}>
+            <HeroSection />
+          </Animation>
+
+          <Animation type="slideUp" duration={1.5} delay={0.2}>
+            <AboutSection />
+          </Animation>
+
+          <Animation type="slideRight" duration={1.3} staggerChildren={0.2}>
+            <Skills />
+          </Animation>
+
+          <Animation type="slideLeft" duration={1.3} delay={0.3}>
+            <PortfolioShowcase />
+          </Animation>
+
+          <Animation type="scale" duration={1.2} delay={0.2}>
+            <MyGitHubCalendar />
+          </Animation>
+
+          <Animation type="rotate" duration={1.2} delay={0.3}>
+            <ContactSection />
+          </Animation>
         </main>
 
         {/* Footer */}

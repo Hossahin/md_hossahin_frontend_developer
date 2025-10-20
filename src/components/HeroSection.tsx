@@ -9,7 +9,7 @@ import TextType from "./TextType";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-between items-center pt-24 md:pt-28 lg:pt-20 px-4 sm:px-6 md:px-8">
+    <div className="flex flex-col-reverse md:flex-row justify-between items-center mt-12 pt-24 md:pt-28 lg:pt-20 px-4 sm:px-6 md:px-8">
       <div className="flex-1 mt-8 md:mt-0 text-center md:text-left w-full">
         {/* <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold md:w-full">
           <span className="text-animated-gradient">Frontend Developer</span>

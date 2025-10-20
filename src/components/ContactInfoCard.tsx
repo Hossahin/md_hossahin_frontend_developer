@@ -34,7 +34,7 @@ const ContactInfo = () => {
             href="https://wa.me/8801315163647"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-[0.8rem] bg-green-600/20 border border-green-500/40 text-green-400 font-semibold px-[1.618rem] py-[0.8rem] rounded-full hover:bg-green-600/30 hover:scale-[1.05] transition-all duration-300"
+            className="inline-flex items-center gap-[0.8rem] bg-blue-600/20 border border-blue-500/40 text-blue-400 font-semibold px-[1.618rem] py-[0.8rem] rounded-full hover:bg-blue-600/30 hover:scale-[1.05] transition-all duration-300"
           >
             <FaWhatsapp className="w-[1.5rem] h-[1.5rem]" />
             WhatsApp Chat
