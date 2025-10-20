@@ -87,7 +87,7 @@ const Skills = () => {
         </p>
 
         {/* Layout */}
-        <div className="flex flex-col sm:flex-row gap-2 mb-6">
+        <div className="flex justify-center flex-col sm:flex-row gap-2 mb-6">
           <button
             onClick={() => setLayout("flex")}
             className={`flex items-center justify-center cursor-pointer gap-2 px-4 py-2 rounded w-full sm:w-auto ${
