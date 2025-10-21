@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { GoDownload } from "react-icons/go";
+import { MdOutlineMenu } from "react-icons/md";
 import { Link } from "react-scroll";
 
 const Navbar = () => {
@@ -19,7 +20,6 @@ const Navbar = () => {
           Home
         </Link>
       </li>
-
       <li>
         <Link
           to="about"
@@ -33,7 +33,6 @@ const Navbar = () => {
           About
         </Link>
       </li>
-
       <li>
         <Link
           to="skills"
@@ -47,7 +46,6 @@ const Navbar = () => {
           Skills
         </Link>
       </li>
-
       <li>
         <Link
           to="projects"
@@ -61,7 +59,6 @@ const Navbar = () => {
           Projects
         </Link>
       </li>
-
       <li>
         <Link
           to="contact"
@@ -78,25 +75,12 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="w-full bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-50 mt-2">
-      <div className="navbar relative overflow max-w-screen-2xl mx-auto flex justify-center items-center border border-blue-700 rounded-full">
+    <div className="w-full fixed top-0 left-1/2 -translate-x-1/2 z-50 mt-1.5">
+      <div className="navbar relative max-w-screen-2xl mx-auto flex justify-center items-center bg-black/30 backdrop-blur-md border border-blue-700 rounded-full">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
+            <div tabIndex={0} role="button" className="cursor-pointer pl-4 lg:hidden">
+              <MdOutlineMenu size={24} className="text-white"/>
             </div>
             <ul
               tabIndex={0}
@@ -106,7 +90,7 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <div className="relative pl-0 md:pl-5 inline-block w-fit">
+          <div className="relative pl-0 md:pl-2 inline-block w-fit">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-400 tracking-wide">
               <span className="text-blue-500">&lt;</span>
               Md <span className="text-blue-500">Hossahin</span>
