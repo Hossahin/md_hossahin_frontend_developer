@@ -1,19 +1,85 @@
+"use client";
 import React from "react";
 import { GoDownload } from "react-icons/go";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const navLinks = (
     <>
-      <li>Home</li>
-      <li>About</li>
-      <li>Skills</li>
-      <li>Projects</li>
-      <li>Contact</li>
+      <li>
+        <Link
+          to="home"
+          spy={true}
+          smooth="easeInOutQuart"
+          duration={1000}
+          offset={-80}
+          activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
+          className="cursor-pointer hover:text-blue-400 hover:scale-110 transition-all duration-300"
+        >
+          Home
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          to="about"
+          spy={true}
+          smooth="easeInOutQuart"
+          duration={1000}
+          offset={-80}
+          activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
+          className="cursor-pointer hover:text-blue-400 hover:scale-110 transition-all duration-300"
+        >
+          About
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          to="skills"
+          spy={true}
+          smooth="easeInOutQuart"
+          duration={1000}
+          offset={-80}
+          activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
+          className="cursor-pointer hover:text-blue-400 hover:scale-110 transition-all duration-300"
+        >
+          Skills
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          to="projects"
+          spy={true}
+          smooth="easeInOutQuart"
+          duration={1000}
+          offset={-120}
+          activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
+          className="cursor-pointer hover:text-blue-400 hover:scale-110 transition-all duration-300"
+        >
+          Projects
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          to="contact"
+          spy={true}
+          smooth="easeInOutQuart"
+          duration={1000}
+          offset={-80}
+          activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
+          className="cursor-pointer hover:text-blue-400 hover:scale-110 transition-all duration-300"
+        >
+          Contact
+        </Link>
+      </li>
     </>
   );
   return (
-    <div className="w-full bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-20 mt-2">
-      <div className="navbar relative overflow-hidden max-w-screen-2xl mx-auto flex justify-center items-center border border-blue-700 rounded-full">
+    <div className="w-full bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-50 mt-2">
+      <div className="navbar relative overflow max-w-screen-2xl mx-auto flex justify-center items-center border border-blue-700 rounded-full">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -34,7 +100,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-gray-800 rounded-box z-50 mt-3 w-52 p-2 shadow text-white"
+              className="menu menu-sm dropdown-content bg-gray-800 rounded-box z-10 mt-3 w-52 p-2 shadow text-white gap-5"
             >
               {navLinks}
             </ul>
