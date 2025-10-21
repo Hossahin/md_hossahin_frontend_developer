@@ -27,21 +27,23 @@ const HeroSection = () => {
             className="text-lg lg:text-xl pl-2"
           />
 
-          <BlurText
-            text="Frontend Developer"
-            delay={150}
-            animateBy="words"
-            direction="top"
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold md:w-full"
-          />
+          <div className="flex justify-center md:justify-start w-full mx-auto">
+            <BlurText
+              text="Frontend Developer"
+              delay={150}
+              animateBy="words"
+              direction="top"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold"
+            />
+          </div>
         </div>
 
-        <p className="pl-2 mt-4 text-lg lg:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
+        <p className="pl-2 mt-2 text-lg lg:text-xl leading-relaxed text-gray-400 w-full sm:w-11/12 md:w-10/12 lg:w-4/5 mx-auto md:mx-0">
           I create responsive, modern, and user-friendly web experiences that
           captivate and engage.
         </p>
 
-        <div className="mt-6 sm:mt-8 flex justify-center md:justify-start gap-3 sm:gap-4">
+        <div className="mt-4 flex justify-center md:justify-start gap-3 sm:gap-4">
           <Link
             href={"https://www.linkedin.com/in/hossahin/"}
             target="_blank"
@@ -68,7 +70,7 @@ const HeroSection = () => {
           </Link>
         </div>
 
-        <div className="mt-8 sm:mt-10 flex justify-center md:justify-start">
+        <div className="mt-4 flex justify-center md:justify-start">
           <HireMe />
         </div>
       </div>
