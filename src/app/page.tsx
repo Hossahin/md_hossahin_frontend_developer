@@ -34,7 +34,7 @@ const page = () => {
             <Skills />
           </Animation>
 
-          <Animation type="slideLeft" duration={1.3} delay={0.3}>
+          <Animation type="scale" duration={1.3} delay={0.3}>
             <PortfolioShowcase />
           </Animation>
 
@@ -42,7 +42,7 @@ const page = () => {
             <MyGitHubCalendar />
           </Animation>
 
-          <Animation type="rotate" duration={1.2} delay={0.3}>
+          <Animation type="scale" duration={1.2} delay={0.3}>
             <ContactSection />
           </Animation>
         </main>
