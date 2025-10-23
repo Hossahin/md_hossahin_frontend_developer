@@ -10,7 +10,7 @@ const page = () => {
       <BackgroundLock />
       <div className="flex flex-col min-h-screen">
         {/* Navbar top */}
-        <header>
+        <header className="">
           <Navbar />
         </header>
 
