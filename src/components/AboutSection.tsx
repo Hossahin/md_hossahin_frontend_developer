@@ -2,6 +2,7 @@ import React from "react";
 import { GoDownload } from "react-icons/go";
 import { IoCodeSlash } from "react-icons/io5";
 import BlurText from "./BlurText";
+import { Link } from "react-scroll";
 const AboutSection = () => {
   return (
     <div className="mt-12 px-4">
@@ -36,13 +37,17 @@ const AboutSection = () => {
         >
           Resume <GoDownload size={18} className="sm:text-lg md:text-xl" />
         </a>
-        <button
+        <Link
+          to="projects"
+          spy={true}
+          duration={1000}
+          offset={-80}
           className="flex justify-center px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 lg:px-10 lg:py-4 gap-2 items-center font-bold bg-blue-500/10 text-blue-400 border border-blue-500 rounded-lg
              cursor-pointer transition-all duration-300 ease-in-out 
              hover:bg-blue-500 hover:text-white shadow-blue"
         >
           Projects <IoCodeSlash size={18} className="sm:text-lg md:text-xl" />
-        </button>
+        </Link>
       </div>
     </div>
   );

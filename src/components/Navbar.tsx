@@ -11,7 +11,6 @@ const Navbar = () => {
         <Link
           to="home"
           spy={true}
-          smooth="easeInOutQuart"
           duration={1000}
           offset={-80}
           activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
@@ -24,7 +23,6 @@ const Navbar = () => {
         <Link
           to="about"
           spy={true}
-          smooth="easeInOutQuart"
           duration={1000}
           offset={-80}
           activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
@@ -37,7 +35,6 @@ const Navbar = () => {
         <Link
           to="skills"
           spy={true}
-          smooth="easeInOutQuart"
           duration={1000}
           offset={-80}
           activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
@@ -50,7 +47,6 @@ const Navbar = () => {
         <Link
           to="projects"
           spy={true}
-          smooth="easeInOutQuart"
           duration={1000}
           offset={-120}
           activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
@@ -63,7 +59,6 @@ const Navbar = () => {
         <Link
           to="contact"
           spy={true}
-          smooth="easeInOutQuart"
           duration={1000}
           offset={-80}
           activeClass="text-blue-400 font-bold border-b-2 border-blue-400 pb-1 transition-all duration-300"
@@ -75,8 +70,7 @@ const Navbar = () => {
     </>
   );
   return (
- 
-     <div className="navbar max-w-screen-2xl mx-auto flex justify-center items-center bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-50 md:mt-1.5 border border-blue-700/40 md:rounded-full">
+    <div className="navbar max-w-screen-2xl mx-auto flex justify-center items-center bg-black/30 backdrop-blur-md fixed top-0 left-1/2 -translate-x-1/2 z-50 md:mt-1.5 border border-blue-700/40 md:rounded-full">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -119,7 +113,6 @@ const Navbar = () => {
         </a>
       </div>
     </div>
-
   );
 };
 

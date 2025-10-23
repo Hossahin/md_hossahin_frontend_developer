@@ -13,10 +13,10 @@ const MyPhoto = () => {
       <Image
         src="/MyPhoto/MyPhoto.png"
         alt="Md Hossahin"
-        width={384} // adjust according to your layout
-        height={384} // adjust accordingly
+        width={384}
+        height={384}
         className="object-cover w-full h-full"
-        priority // optional: preloads the image
+        priority 
       />
     </motion.div>
   );

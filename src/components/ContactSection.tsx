@@ -1,3 +1,4 @@
+import { Element } from "react-scroll";
 import BlurText from "./BlurText";
 import ContactForm from "./ContactForm";
 import ContactInfoCard from "./ContactInfoCard";
@@ -25,7 +26,9 @@ const ContactSection = () => {
         </p>
 
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <ContactForm />
+          <Element name="contactme">
+            <ContactForm />
+          </Element>
           <ContactInfoCard />
         </div>
       </div>
