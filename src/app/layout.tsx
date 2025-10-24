@@ -11,6 +11,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Md Hossahin",
   description: "Md Hossahin Portfoilo",
+  icons: {
+    icon: "/favicon.png", 
+  },
 };
 
 export default function RootLayout({

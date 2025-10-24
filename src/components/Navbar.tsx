@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React from "react";
 import { GoDownload } from "react-icons/go";
 import { MdOutlineMenu } from "react-icons/md";
@@ -89,11 +90,19 @@ const Navbar = () => {
         </div>
 
         <div className="relative pl-0 md:pl-2 inline-block w-fit">
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-400 tracking-wide">
+          {/* <h3 className="text-2xl md:text-3xl font-bold text-gray-400 tracking-wide">
             <span className="text-blue-500">&lt;</span>
             Md <span className="text-blue-500">Hossahin</span>
             <span className="text-blue-500">/&gt;</span>
-          </h3>
+          </h3> */}
+
+          <Image
+            src="/favicon.png"
+            alt="Md Hossahin"
+            width={45}
+            height={45}
+            className="object-cover w-full h-full"
+          />
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
