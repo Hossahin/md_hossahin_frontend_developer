@@ -47,7 +47,7 @@ const HeroSection = () => {
           <Link
             href={"https://www.linkedin.com/in/hossahin/"}
             target="_blank"
-            className="text-white bg-blue-700/20 border border-blue-700 p-2 rounded-full hover:scale-105 hover:rotate-6 transition-all duration-300 ease-in-out"
+            className="text-white bg-blue-700/20 border border-blue-800 p-2 rounded-full hover:scale-105 hover:rotate-6 transition-all duration-300 ease-in-out"
           >
             <TiSocialLinkedin
               size={28}
@@ -57,14 +57,14 @@ const HeroSection = () => {
           <Link
             href={"https://github.com/Hossahin"}
             target="_blank"
-            className="text-white bg-blue-700/20 border border-blue-700 p-2 rounded-full hover:scale-105 hover:rotate-6 transition-all duration-300 ease-in-out"
+            className="text-white bg-blue-700/20 border border-blue-800 p-2 rounded-full hover:scale-105 hover:rotate-6 transition-all duration-300 ease-in-out"
           >
             <FaGithub size={28} className="text-gray-400 hover:text-white" />
           </Link>
           <Link
             href={"https://wa.me/8801315163647"}
             target="_blank"
-            className="text-white bg-blue-700/20 border border-blue-700 p-2 rounded-full hover:scale-105 hover:rotate-6 transition-all duration-300 ease-in-out"
+            className="text-white bg-blue-700/20 border border-blue-800 p-2 rounded-full hover:scale-105 hover:rotate-6 transition-all duration-300 ease-in-out"
           >
             <FaWhatsapp size={28} className="text-gray-400 hover:text-white" />
           </Link>
