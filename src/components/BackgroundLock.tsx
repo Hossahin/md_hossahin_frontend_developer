@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 import { useMemo } from "react";
 
 export default function BackgroundLock() {
-  const rows = 12; // grid rows
-  const cols = 20; // grid cols
+  const rows = 12; 
+  const cols = 20; 
 
-  // Snow particles
   const particles = useMemo(
     () =>
       Array.from({ length: 100 }).map((_, i) => ({

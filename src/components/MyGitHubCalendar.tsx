@@ -61,7 +61,7 @@ const MyGitHubCalendar = () => {
 
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-6 flex-wrap">
           {/* GitHub Stats */}
-          <div className="w-full sm:w-[420px] aspect-[3/1] relative">
+          {/* <div className="w-full sm:w-[420px] aspect-[3/1] relative">
             <Image
               src="https://github-readme-stats.vercel.app/api?username=Hossahin&theme=transparent&hide_border=true&include_all_commits=false&count_private=false"
               alt="GitHub Stats"
@@ -69,7 +69,7 @@ const MyGitHubCalendar = () => {
               className="rounded-lg object-contain"
               unoptimized
             />
-          </div>
+          </div> */}
 
           {/* GitHub Streak */}
           <div className="w-full sm:w-[420px] aspect-[3/1] relative">
@@ -83,7 +83,7 @@ const MyGitHubCalendar = () => {
           </div>
 
           {/* Most Used Languages */}
-          <div className="w-full sm:w-[420px] aspect-[3/1] relative">
+          {/* <div className="w-full sm:w-[420px] aspect-[3/1] relative">
             <Image
               src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hossahin&theme=transparent&hide_border=true&include_all_commits=false&count_private=false&layout=compact"
               alt="Most Used Languages"
@@ -91,7 +91,7 @@ const MyGitHubCalendar = () => {
               className="rounded-lg object-contain"
               unoptimized
             />
-          </div>
+          </div> */}
         </div>
 
         <p className="text-center text-sm text-gray-500 mt-8">

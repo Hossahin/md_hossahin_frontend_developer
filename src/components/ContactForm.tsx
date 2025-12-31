@@ -13,8 +13,6 @@ const ContactForm: React.FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
-
-    // Get current date & time
     const now = new Date();
     const time = now.toLocaleString("en-US", {
       hour: "numeric",
@@ -26,7 +24,6 @@ const ContactForm: React.FC = () => {
     const year = now.getFullYear();
     const date = `${day} ${month} ${year}`;
 
-    // Set hidden fields
     const timeInput = formRef.current.querySelector<HTMLInputElement>("#time");
     const dateInput = formRef.current.querySelector<HTMLInputElement>("#date");
 
@@ -78,7 +75,7 @@ const ContactForm: React.FC = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      {/* Hidden fields for time and date */}
+
       <input type="hidden" name="time" id="time" />
       <input type="hidden" name="date" id="date" />
 
