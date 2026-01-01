@@ -41,7 +41,7 @@ const Navbar = () => {
           {label}
           {/* Animated Underline for "Developer" look */}
           <span
-            className="absolute bottom-0 left-0 h-[2px] w-0 bg-blue-500/50 
+            className="absolute bottom-0 left-0 h-0.5 w-0 bg-blue-500/50 
                        transition-all duration-300 group-hover:w-full"
           />
         </Link>
@@ -50,19 +50,21 @@ const Navbar = () => {
   );
 
   return (
-    <nav
-      className={`fixed left-1/2 -translate-x-1/2 z-[100]
-    w-full max-w-screen-xl rounded-2xl border transform-gpu
+ <nav
+  className={`fixed left-1/2 -translate-x-1/2 z-100
+    w-full max-w-7xl rounded-2xl border transform-gpu
     will-change-[transform,top,padding,background-color,box-shadow]
     transition-[transform,top,padding,background-color,box-shadow]
-    duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)]
+    duration-1200 ease-[cubic-bezier(0.16,1,0.3,1)]
     ${
       scrolled
-        ? "scale-x-100 transition-all duration-1000 top-2 py-1.5 bg-zinc-950/80 backdrop-blur-md border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
+        ? "scale-x-100 top-2 py-1.5 bg-zinc-950/80 backdrop-blur-md border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
         : "scale-x-[0.95] top-4 py-4 bg-transparent border-transparent shadow-none"
     }`}
-      style={{ transformOrigin: "center" }}
-    >
+  style={{ transformOrigin: "center" }}
+>
+
+
       <div className="flex items-center justify-between px-6">
         {/* Brand/Logo Section */}
         <div className="flex items-center gap-4">
@@ -113,7 +115,7 @@ const Navbar = () => {
 
       {/* Mobile Menu - Technical Drawer Style */}
       <div
-        className={`lg:hidden absolute top-[100%] left-0 w-full overflow-hidden transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1)
+        className={`lg:hidden absolute top-full left-0 w-full overflow-hidden transition-all duration-500 cubic-bezier(0.4, 0, 0.2, 1)
         ${
           open
             ? "max-h-96 opacity-100 translate-y-0"
