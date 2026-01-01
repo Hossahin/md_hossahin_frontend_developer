@@ -15,7 +15,7 @@ const page = () => {
         </header>
 
         {/* Main content */}
-        <main className="flex-1 w-full max-w-screen-2xl mx-auto">
+        <main className="flex-1 w-full max-w-screen-xl mx-auto">
           <HomePageSections />
         </main>
 
