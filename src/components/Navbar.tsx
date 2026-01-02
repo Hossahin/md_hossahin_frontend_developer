@@ -98,7 +98,7 @@ const Navbar = () => {
           <a
             href="/File/md_hossahin_frontend_developer.pdf"
             download
-            className="group relative flex items-center gap-2 px-5 py-2.5 text-xs md:text-sm font-bold uppercase tracking-wider
+            className="group relative flex items-center gap-2 px-5 py-2.5 text-xs md:text-sm font-bold tracking-wider
             bg-blue-500 text-white rounded-xl overflow-hidden transition-all duration-300
             hover:bg-blue-400 hover:text-white hover:shadow-[0_0_25px_rgba(34,211,238,0.4)]"
           >

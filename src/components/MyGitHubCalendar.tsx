@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 import BlurText from "./BlurText";
 import Image from "next/image";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
+import { motion } from "motion/react";
 
 const MyGitHubCalendar = () => {
   const [blockSize, setBlockSize] = useState(12);
@@ -43,7 +46,7 @@ const MyGitHubCalendar = () => {
         </p>
 
         <div className="overflow-x-auto flex justify-center">
-          <div className="min-w-[320px] sm:min-w-[500px] md:min-w-[650px] lg:min-w-[800px] text-gray-400">
+          <div className="min-w-[320px] sm:min-w-125 md:min-w-162.5 lg:min-w-200 text-gray-400">
             <GitHubCalendar
               username="hossahin"
               blockSize={blockSize}
@@ -72,7 +75,7 @@ const MyGitHubCalendar = () => {
           </div> */}
 
           {/* GitHub Streak */}
-          <div className="w-full sm:w-[420px] aspect-[3/1] relative">
+          <div className="w-full sm:w-105 aspect-3/1 relative">
             <Image
               src="https://nirzak-streak-stats.vercel.app/?user=Hossahin&theme=transparent&hide_border=true"
               alt="GitHub Streak"
@@ -94,9 +97,60 @@ const MyGitHubCalendar = () => {
           </div> */}
         </div>
 
-        <p className="text-center text-sm text-gray-500 mt-8">
-          “Consistency is the key to growth — every commit counts.”
-        </p>
+        {/* Follow on Github */}
+        <div className="flex justify-center items-center animate-bounce">
+          <motion.div
+            whileHover="hover"
+            initial="rest"
+            animate="rest"
+            className="relative"
+          >
+            <Link
+              href="https://github.com/Hossahin"
+              target="_blank"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-blue-500"
+            >
+              {/* Icon */}
+              <motion.span
+                variants={{
+                  rest: { scale: 1, opacity: 0.8 },
+                  hover: { scale: 1.15, opacity: 1 },
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <FaGithub className="text-lg" />
+              </motion.span>
+
+              {/* Text */}
+              <span className="relative">
+                Follow me on GitHub
+                {/* Animated underline */}
+                <motion.span
+                  variants={{
+                    rest: { width: 0 },
+                    hover: { width: "100%" },
+                  }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  className="absolute left-0 -bottom-1 h-0.5 bg-blue-500"
+                />
+              </span>
+              <span className="relative flex size-3">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex size-3 rounded-full bg-blue-500"></span>
+              </span>
+            </Link>
+
+            {/* Soft glow */}
+            <motion.div
+              variants={{
+                rest: { opacity: 0 },
+                hover: { opacity: 1 },
+              }}
+              transition={{ duration: 0.3 }}
+              className="absolute inset-0 -z-10 rounded-lg blur-md bg-blue-500/20"
+            />
+          </motion.div>
+        </div>
       </div>
     </section>
   );
