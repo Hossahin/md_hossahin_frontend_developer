@@ -62,7 +62,7 @@ const MyGitHubCalendar = () => {
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mt-6 flex-wrap">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-6 flex-wrap">
           {/* GitHub Stats */}
           {/* <div className="w-full sm:w-[420px] aspect-[3/1] relative">
             <Image
@@ -77,7 +77,7 @@ const MyGitHubCalendar = () => {
           {/* GitHub Streak */}
           <div className="w-full sm:w-105 aspect-3/1 relative">
             <Image
-              src="https://nirzak-streak-stats.vercel.app/?user=Hossahin&theme=transparent&hide_border=true"
+              src="https://nirzak-streak-stats.vercel.app?user=Hossahin&theme=transparent&hide_border=true&date_format=j%20M%5B%20Y%5D"
               alt="GitHub Streak"
               fill
               className="rounded-lg object-contain"

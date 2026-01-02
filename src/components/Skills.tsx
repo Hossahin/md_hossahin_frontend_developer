@@ -204,7 +204,7 @@ const Skills = () => {
                             priority
                           />
                         </div>
-                        <h3 className="relative z-10 text-sm sm:text-base font-semibold text-white tracking-wide text-center group-hover:text-cyan-300 transition-colors duration-300">
+                        <h3 className="relative z-10 text-sm sm:text-base font-semibold text-white tracking-wide text-center group-hover:text-blue-500 transition-colors duration-300">
                           {skill.name}
                         </h3>
                       </div>
