@@ -120,9 +120,9 @@ const Skills = () => {
                   className={`group relative flex flex-col items-center justify-center bg-gray-800 rounded-xl p-4 w-full overflow-hidden
               transform transition-all duration-500 ease-in-out
               hover:-translate-y-2 hover:shadow-2xl
-              ${skill.shadowColor}  hover:shadow-lg`}
+              ${skill.shadowColor}  hover:shadow-lg hover:border-blue-500`}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-linear-to-br from-gray-800 to-gray-900 opacity-80 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <div className="relative z-10 flex flex-col items-center">
                     <div className="w-14 h-14 sm:w-16 sm:h-16 mx-auto mb-2 transition-transform duration-500 ease-in-out group-hover:scale-110 group-hover:rotate-3 relative">
                       <Image

@@ -50,8 +50,8 @@ const Navbar = () => {
   );
 
   return (
- <nav
-  className={`fixed left-1/2 -translate-x-1/2 z-100
+    <nav
+      className={`fixed left-1/2 -translate-x-1/2 z-100
     w-full max-w-7xl rounded-2xl border transform-gpu
     will-change-[transform,top,padding,background-color,box-shadow]
     transition-[transform,top,padding,background-color,box-shadow]
@@ -61,10 +61,8 @@ const Navbar = () => {
         ? "scale-x-100 top-2 py-1.5 bg-zinc-950/80 backdrop-blur-md border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.45)]"
         : "scale-x-[0.95] top-4 py-4 bg-transparent border-transparent shadow-none"
     }`}
-  style={{ transformOrigin: "center" }}
->
-
-
+      style={{ transformOrigin: "center" }}
+    >
       <div className="flex items-center justify-between px-6">
         {/* Brand/Logo Section */}
         <div className="flex items-center gap-4">
