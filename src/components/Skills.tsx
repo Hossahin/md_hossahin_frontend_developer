@@ -2,7 +2,7 @@
 import Image from "next/image";
 import BlurText from "./BlurText";
 import Marquee from "react-fast-marquee";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaStream, FaTh } from "react-icons/fa";
 
 const skills = [
@@ -65,13 +65,29 @@ const skills = [
 
 const Skills = () => {
   const [layout, setLayout] = useState("flex");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 640) setLayout("grid");
+      else setLayout("flex");
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (!mounted) return null;
+
   return (
     <div className="mt-12">
       <div className="container mx-auto px-4">
-        {/* <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-center text-animated-gradient">
-          My Skills
-        </h2> */}
-
         <div className="flex justify-center">
           <BlurText
             text="My Skills"
