@@ -182,7 +182,7 @@ const Skills = () => {
                   gradient={false}
                   className="!overflow-visible [&>div]:!overflow-visible [&>div>div]:!overflow-visible"
                 >
-                  <div className="flex gap-6 sm:gap-10 px-4 overflow-visible">
+                  <div className="flex gap-6 px-4 overflow-visible">
                     {skills.map((skill, index) => (
                       <div
                         key={index}

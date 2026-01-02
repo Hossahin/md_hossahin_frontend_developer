@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import Footer from "@/components/Footer";
 import HomePageSections from "@/components/HomePageSections";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const page = () => {
   return (
@@ -15,7 +16,7 @@ const page = () => {
         </header>
 
         {/* Main content */}
-        <main className="flex-1 w-full max-w-screen-xl mx-auto">
+        <main className="flex-1 w-full max-w-7xl mx-auto">
           <HomePageSections />
         </main>
 
@@ -24,6 +25,7 @@ const page = () => {
           <Footer />
         </footer>
       </div>
+      <ScrollToTop />
     </>
   );
 };
